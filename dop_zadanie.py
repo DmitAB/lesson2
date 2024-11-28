@@ -6,11 +6,10 @@ first_field = random.choice(first_field)
 result = []
 for i in range(1,first_field):
     for j in range(2,first_field):
-        if first_field % (i + j) == 0:
-            if i != j and (j,i) not in result:
-                kod = i,j
-                result.append(kod)
-                continue
+        if first_field % (i + j) == 0 and i != j and (j,i) not in result:
+            kod = i,j
+            result.append(kod)
+            continue
 
 result = str(result)
 del_ = [',', '(', ')', ']','[',' ']
